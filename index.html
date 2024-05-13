@@ -1,28 +1,296 @@
-<!DOCTYPE html>
-<html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delightful Modpack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #292929; /* Dark background color */
+            color: #fff; /* Text color */
+        }
+        header {
+            background-color: #4a4a4a; /* Header color */
+            padding: 20px;
+            text-align: center;
+            animation: fadeInDown 1s ease-out;
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        nav {
+            background-color: #333333; /* Navigation color */
+            padding: 10px;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: transform 0.3s ease-out;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            transform: scale(1.1);
+        }
+        section {
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+            background-color: #4a4a4a; /* Section background color */
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        footer {
+            background-color: #333333; /* Footer color */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: fadeInUp 1s ease-out;
+        }
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .portfolio-image {
+            width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-out;
+        }
+        .portfolio-image:hover {
+            transform: scale(1.05);
+        }
+        .feature-guide {
+            background-color: #4a4a4a; /* Feature guide background color */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .downloads {
+            background-color: #4a4a4a; /* Downloads section background color */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .download-column {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .divider {
+            background-color: #333333;
+            width: 2px;
+            margin: 0 20px;
+        }
+        .version-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .version {
+            background-color: #666666; /* Version background color */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .changelog {
+            background-color: #555555; /* Changelog background color */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .download-button {
+            background-color: #009688; /* Button color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-out;
+            margin: 5px;
+        }
+        .download-button:hover {
+            background-color: #00796b; /* Button hover color */
+        }
+        .links-section {
+            background-color: #4a4a4a; /* Links section background color */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .contact-section {
+            background-color: #333333; /* Contact section background color */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            margin-bottom: 10px;
+        }
+        .license-section {
+            background-color: #4a4a4a; /* License section background color */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Delightful Modpack</h1>
+        <p>Your ultimate Minecraft experience awaits!</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#features">Features</a>
+        <a href="#downloads">Downloads</a>
+    </nav>
+    <section id="about">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida gravida nisl eu laoreet. Nullam convallis euismod eros, vitae viverra elit porta eu. Donec ut aliquet velit. Nulla facilisi. Aliquam tincidunt urna vitae arcu scelerisque vestibulum.</p>
+    </section>
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="portfolio">
+            <img src="https://via.placeholder.com/300x200" alt="Image 1" class="portfolio-image">
+            <img src="https://via.placeholder.com/300x200" alt="Image 2" class="portfolio-image">
+            <img src="https://via.placeholder.com/300x200" alt="Image 3" class="portfolio-image">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature-guide">
+            <h3>Feature 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum eros ac lectus commodo, vel suscipit urna fermentum.</p>
+            <h3>Feature 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum eros ac lectus commodo, vel suscipit urna fermentum.</p>
+            <h3>Feature 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum eros ac lectus commodo, vel suscipit urna fermentum.</p>
+            <!-- Add more features -->
+        </div>
+    </section>
+    <section id="downloads">
+        <h2>Downloads</h2>
+        <div class="downloads">
+            <div class="download-column">
+                <h3>Delightful Downloads</h3>
+                <div class="version-column">
+                    <div class="version">Version 1.2</div>
+                    <div class="changelog">
+                        <h3>Changelog:</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum eros ac lectus commodo, vel suscipit urna fermentum.</p>
+                    </div>
+                    <button class="download-button">Download Modpack</button>
+                    <button class="download-button">Download Resource Pack</button>
+                </div>
+                <div class="version-column">
+                    <div class="version">Version 1.1</div>
+                    <div class="changelog">
+                        <h3>Changelog:</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum eros ac lectus commodo, vel suscipit urna fermentum.</p>
+                    </div>
+                    <button class="download-button">Download Modpack</button>
+                    <button class="download-button">Download Resource Pack</button>
+                </div>
+                <div class="version-column">
+                    <div class="version">Version 1.0</div>
+                    <div class="changelog">
+                        <h3>Changelog:</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum eros ac lectus commodo, vel suscipit urna fermentum.</p>
+                    </div>
+                    <button class="download-button">Download Modpack</button>
+                    <button class="download-button">Download Resource Pack</button>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="download-column">
+                <h3>Delightfully Vanilla Downloads</h3>
+                <div class="version-column">
+                    <div class="version">Version 1.0</div>
+                    <div class="changelog">
+                        <h3>Changelog:</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum eros ac lectus commodo, vel suscipit urna fermentum.</p>
+                    </div>
+                    <button class="download-button">Download Modpack</button>
+                    <button class="download-button">Download Resource Pack</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="links">
+        <h2>Links</h2>
+        <p>Visit our Modrinth page:</p>
+        <a href="https://modrinth.com/modpacks/delightful-modpack" target="_blank">Delightful Modpack on Modrinth</a>
+    </section>
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <div class="contact-section">
+            <h3>Email</h3>
+            <p>contact@delightfulmodpack.com</p>
+        </div>
+        <div class="contact-section">
+            <h3>Phone</h3>
+            <p>+1 (123) 456-7890</p>
+        </div>
+    </section>
+    <section id="license">
+        <h2>License</h2>
+        <div class="license-section">
+            <p>This project is licensed under the Apache License 2.0 - see the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">LICENSE</a> file for details.</p>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Delightful Modpack</p>
+    </footer>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-<title>Braverthebrave</title>
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-<body style="background-color:black;">
 
-<h1 style="color:white;text-align:center;font-family:courier;"><ins>Braverthebrave</ins></h1>
-<p style="color:white;text-align:center;font-family:ariel;"><sup><i>*made at 2am bcz bored</i></sup></p>
-<br>
-  <br>
-<h3 style="color:white;text-align:center;font-family:ariel;">Modpack Below</h3>
-<a href="https://modrinth.com/modpack/delightful-modpack"><img src="f619ca14290fb1dd22d1d3d4c10dd07ce97b42e1.webp" alt="insert image here" class="center"></a>
-  <br>
-<h3 style="color:white;text-align:center;">Idk, alex check the title</h3>
-  <br>
-  <br>
-<p style="color:white;text-align:center;">btw unblocking games may be possible thru dis:P</p>
-  <iframe src="https://www.gameflare.com/embed/rogue-soul/" frameborder="0" scrolling="no" width="800" height="635" allowfullscreen></iframe>
-</body>
-</html>
+</body></html>
