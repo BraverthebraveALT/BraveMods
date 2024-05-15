@@ -1,144 +1,113 @@
-<html lang="en"><head>
+<html lang="en"><style class="adjust-screen-brightness" media="screen"></style><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delightful Modpack</title>
     <style>
-        .center {
+               .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
-        body {
-            font-family: Arial, sans-serif;
+} /* Reset */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
             background-color: #292929; /* Dark background color */
             color: #fff; /* Text color */
+            line-height: 1.6;
+            scroll-behavior: smooth;
         }
+
         header {
-            background-color: #4a4a4a; /* Header color */
+            background-image: url("2024-05-04_16.31.54.png"); /* Header color */
             padding: 20px;
             text-align: center;
             animation: fadeInDown 1s ease-out;
         }
-        @keyframes fadeInDown {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+
         nav {
             background-color: #333333; /* Navigation color */
             padding: 10px;
             text-align: center;
-            animation: fadeInUp 1s ease-out;
             position: sticky;
             top: 0;
             z-index: 1000;
+            animation: fadeInUp 1s ease-out;
         }
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 10px;
             transition: transform 0.3s ease-out;
         }
+
         nav a:hover {
             text-decoration: underline;
             transform: scale(1.1);
         }
+
         section {
             padding: 20px;
-            animation: fadeIn 1s ease-out;
             background-color: #4a4a4a; /* Section background color */
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin: 20px;
+            animation: fadeIn 1s ease-out;
         }
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        footer {
-            background-color: #333333; /* Footer color */
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            animation: fadeInUp 1s ease-out;
-        }
+
         .portfolio {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
+
         .portfolio-image {
             width: 300px;
             margin: 10px;
             border-radius: 10px;
             transition: transform 0.3s ease-out;
         }
+
         .portfolio-image:hover {
             transform: scale(1.05);
         }
-        .feature-guide {
-            background-color: #4a4a4a; /* Feature guide background color */
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+
         .downloads {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .download-column {
+            flex: 1;
+            margin: 10px;
             background-color: #4a4a4a; /* Downloads section background color */
             padding: 20px;
             border-radius: 10px;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
         }
-        .download-column {
-            flex: 1;
-            margin-right: 10px;
-        }
-        .divider {
-            background-color: #333333;
-            width: 2px;
-            margin: 0 20px;
-        }
+
         .version-column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             margin-bottom: 20px;
         }
+
         .version {
             background-color: #666666; /* Version background color */
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 10px;
         }
+
         .changelog {
             background-color: #555555; /* Changelog background color */
             padding: 10px;
             border-radius: 5px;
         }
+
         .download-button {
             background-color: #009688; /* Button color */
             color: #fff;
@@ -150,29 +119,65 @@
             transition: background-color 0.3s ease-out;
             margin: 5px;
         }
+
         .download-button:hover {
             background-color: #00796b; /* Button hover color */
         }
-        .links-section {
-            background-color: #4a4a4a; /* Links section background color */
+
+        footer {
+            background-color: #333333; /* Footer color */
             padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
-        .contact-section {
-            background-color: #333333; /* Contact section background color */
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .contact-info {
-            margin-bottom: 10px;
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .license-section {
-            background-color: #4a4a4a; /* License section background color */
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* AOS Animations */
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+        }
+
+        [data-aos="slide-up"] {
+            transform: translateY(50px);
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -194,8 +199,8 @@
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="portfolio">
-            <img src="https://via.placeholder.com/300x200" alt="Image 1" class="portfolio-image">
-            <img src="https://via.placeholder.com/300x200" alt="Image 2" class="portfolio-image">
+            <img src="2024-05-04_16.31.54.png" alt="Image 1" class="portfolio-image">
+            <img src="2024-05-11_22.08.59.png" alt="Image 2" class="portfolio-image">
             <img src="https://via.placeholder.com/300x200" alt="Image 3" class="portfolio-image">
             <img src="https://via.placeholder.com/300x200" alt="Image 3" class="portfolio-image">
             <img src="https://via.placeholder.com/300x200" alt="Image 3" class="portfolio-image">
@@ -300,6 +305,7 @@
             });
         });
     </script>
+
 
 
 </body></html>
