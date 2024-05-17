@@ -1,4 +1,4 @@
-<html lang="en"><style class="adjust-screen-brightness" media="screen"></style><head><style class="adjust-screen-brightness" media="screen"></style>
+<html lang="en"><style class="adjust-screen-brightness" media="screen"></style><head><style class="adjust-screen-brightness" media="screen"></style><style class="adjust-screen-brightness" media="screen"></style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Delightful Modpack offers a large collection of visual tweaks, terrain and structure overhauls, rebalances, vanilla+ game mechanics, and side-quest-esque additions to make Minecraft Delightful! Download now and enhance your Minecraft experience.">
@@ -26,7 +26,7 @@
 
         header {
             background-image: url("2024-05-04_16.31.54.png"); /* Header color */
-            padding: 20px;
+            padding: 50px;
             text-align: center;
             animation: fadeInDown 1s ease-out;
         }
@@ -120,6 +120,17 @@
             transition: background-color 0.3s ease-out;
             margin: 5px;
         }
+        .hero-download-button {
+            background-color: #009688; /* Button color */
+            color: #fff;
+            padding: 5px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-out;
+            margin: 5px;
+        }
 
         .download-button:hover {
             background-color: #00796b; /* Button hover color */
@@ -184,7 +195,8 @@
 <body>
     <header>
         <img src="Delightful_title.png" alt="Title Image" class="center">
-        <p>Make Minecraft Delightful!</p>
+        <p>Make Minecraft <ins>Delightful!</ins></p>
+        <a href="Delightful 1.2 FABRIC 1.2.1.mrpack"><button class="hero-download-button">Download</button></a>
     </header>
     <nav>
         <a href="#about">About</a>
@@ -306,6 +318,7 @@
             });
         });
     </script>
+
 
 
 
