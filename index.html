@@ -1,4 +1,14 @@
-<html lang="en"><style class="adjust-screen-brightness" media="screen"></style><head><style class="adjust-screen-brightness" media="screen"></style><style class="adjust-screen-brightness" media="screen"></style>
+<html lang="en"><style class="adjust-screen-brightness" media="screen">html::before {
+  content: " ";
+  z-index: 2147483647;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+}</style><head><style class="adjust-screen-brightness" media="screen"></style><style class="adjust-screen-brightness" media="screen"></style><style class="adjust-screen-brightness" media="screen"></style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Delightful Modpack offers a large collection of visual tweaks, terrain and structure overhauls, rebalances, vanilla+ game mechanics, and side-quest-esque additions to make Minecraft Delightful! Download now and enhance your Minecraft experience.">
@@ -94,6 +104,13 @@
 
         .version-column {
             margin-bottom: 20px;
+        }
+
+        .version-main {
+            background-color: #00cc66; /* Version background color */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
 
         .version {
@@ -248,10 +265,10 @@
                     <button class="download-button">Download Resource Pack</button>
                 </div>
                 <div class="version-column">
-                    <div class="version">Version 1.1</div>
+                    <div class="version-main">Version 1.1</div>
                     <div class="changelog">
                         <h3>Changelog:</h3>
-                        <p>The most stable version of Delightful<br><br>Out Now on Modrinth!<br>removed some mod relating to banners as they were incompatibleupdated to latest verion of fabricremoved bugged puzzles lib button in options menureleased on modrinthstopped all(I think, maybe, Idk) the wierd crashes</p>
+                        <p><b>The most stable version of Delightful</b><br><br>Out Now on Modrinth!<br>removed some mod relating to banners as they were incompatibleupdated to latest verion of fabricremoved bugged puzzles lib button in options menureleased on modrinthstopped all(I think, maybe, Idk) the wierd crashes</p>
                     </div>
                     <button class="download-button">Download Modpack</button>
                     <button class="download-button">Download Resource Pack</button>
@@ -318,6 +335,7 @@
             });
         });
     </script>
+
 
 
 
