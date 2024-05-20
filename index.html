@@ -8,7 +8,17 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.1);
-}</style><head><style class="adjust-screen-brightness" media="screen"></style><style class="adjust-screen-brightness" media="screen"></style><style class="adjust-screen-brightness" media="screen"></style>
+}</style><head><style class="adjust-screen-brightness" media="screen">html::before {
+  content: " ";
+  z-index: 2147483647;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+}</style><style class="adjust-screen-brightness" media="screen"></style><style class="adjust-screen-brightness" media="screen"></style><style class="adjust-screen-brightness" media="screen"></style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Delightful Modpack offers a large collection of visual tweaks, terrain and structure overhauls, rebalances, vanilla+ game mechanics, and side-quest-esque additions to make Minecraft Delightful! Download now and enhance your Minecraft experience.">
@@ -20,6 +30,20 @@
   margin-right: auto;
   width: 50%;
 } /* Reset */
+.parallax {
+  /* The image used */
+  background-image: url("2024-05-04_16.31.54.png");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
         * {
             margin: 0;
             padding: 0;
@@ -36,9 +60,13 @@
 
         header {
             background-image: url("2024-05-04_16.31.54.png"); /* Header color */
-            padding: 50px;
+            padding: 150px;
             text-align: center;
             animation: fadeInDown 1s ease-out;
+            background-attachment: fixed;
+              background-position: center;
+            background-repeat: no-repeat;
+  background-size: cover;
         }
 
         nav {
@@ -208,7 +236,12 @@
             transform: translateY(0);
         }
     </style>
-</head>
+<style id="__web-inspector-hide-shortcut-style__">
+.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
+{
+    visibility: hidden !important;
+}
+</style></head>
 <body>
     <header>
         <img src="Delightful_title.png" alt="Title Image" class="center">
@@ -344,6 +377,7 @@
             });
         });
     </script>
+<--!HI FROM BRAVER-->
 
 
 
