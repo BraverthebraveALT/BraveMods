@@ -34,6 +34,25 @@
     <meta name="description" content="Delightful Modpack offers a large collection of visual tweaks, terrain and structure overhauls, rebalances, vanilla+ game mechanics, and side-quest-esque additions to make Minecraft Delightful! Download now and enhance your Minecraft experience.">
     <title>Delightful Modpack</title>
     <style>
+      /* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
                .center {
   display: block;
   margin-left: auto;
@@ -253,11 +272,13 @@
 }
 </style></head>
 <body>
+  <section id="top">
     <header>
         <img src="Delightful_title.png" alt="Title Image" class="center">
         <p>Make Minecraft <ins>Delightful!</ins></p>
         <a href="Delightful 1.2 FABRIC 1.2.1.mrpack"><button class="hero-download-button">Download</button></a>
     </header>
+  </section>
     <nav>
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
@@ -373,7 +394,7 @@
         </div>
     </section>
     <footer>
-        <p>© 2024 Delightful Modpack<br><a href="#about"><p>Back to the top</p></a></p>
+        <p>© 2024 Delightful Modpack<br><a href="#top"><p>Back to the top</p></a></p>
     </footer>
     <script>
         // Smooth scrolling for navigation links
