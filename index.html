@@ -1,4 +1,4 @@
-<html lang="en"><style class="adjust-screen-brightness" media="screen">html::before {
+<html lang="en"><style class="adjust-screen-brightness" media="screen"></style><head><style class="adjust-screen-brightness" media="screen">html::before {
   content: " ";
   z-index: 2147483647;
   pointer-events: none;
@@ -8,7 +8,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.1);
-}</style><head><style class="adjust-screen-brightness" media="screen">html::before {
+}</style><style class="adjust-screen-brightness" media="screen">html::before {
   content: " ";
   z-index: 2147483647;
   pointer-events: none;
@@ -53,12 +53,85 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #006633; 
 }
-               .center {
+
+:root {
+    --displaycenter: 1vw;
+}
+.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-} /* Reset */
+  z-index: 0;
+  animation: titlebounce1 0.8s ease-in 0s, titlebounce2 0.4s ease-out 0.8s, titlebounce3 0.3s ease-in 1.2s, titlebounce4 0.2s ease-out 1.5s, titlebounce5 0.15s ease-in 1.7s;
+  position: sticky;
+} 
+@keyframes titlebounce1 {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+@keyframes titlebounce2 {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50px)
+    }
+}
+@keyframes titlebounce3 {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0px)
+    }
+}
+@keyframes titlebounce4 {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-25px)
+    }
+}
+@keyframes titlebounce5 {
+    from {
+        transform: translateY(-25px);
+    }
+    to {
+        transform: translateY(0px)
+    }
+}
+.hero-download-button {
+    animation: titledescwait 2.2s ease-out 0s, titledescfadein 0.6s ease-out 2.2s
+}
+.titledesc {
+    animation: titledescwait 1.7s ease-out 0s, titledescfadein 0.6s ease-out 1.7s
+}
+.nav a {
+    animation: 
+}
+@keyframes titledescwait {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+@keyframes titledescfadein {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+/* Reset */
 .parallax {
   /* The image used */
   background-image: url("2024-05-04_16.31.54.png");
@@ -91,7 +164,6 @@
             background-image: url("2024-05-04_16.31.54.png"); /* Header color */
             padding: 150px;
             text-align: center;
-            animation: fadeInDown 1s ease-out;
             background-attachment: fixed;
               background-position: center;
             background-repeat: no-repeat;
@@ -104,23 +176,23 @@
             text-align: center;
             position: sticky;
             top: 0;
+            animation: fadeIn;
             z-index: 1000;
-            animation: fadeInUp 1s ease-out;
         }
 
         nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: transform 0.3s ease-out;
+            color: #fff; /* White text color */
+            text-decoration: none; /* Remove underline */
+            margin: 0 10px; /* Margin for spacing */
+            transition: all 1s ease; /* Smooth transition on hover */
         }
 
         nav a:hover {
-            text-decoration: underline;
-            transform: scale(1.1);
-        }
+            text-decoration: underline; /* Add underline on hover */
+            transform: scale(10);
+            }
 
-        section {
+        .section {
             padding: 20px;
             background-color: #4a4a4a; /* Section background color */
             border-radius: 10px;
@@ -138,11 +210,18 @@
             width: 300px;
             margin: 10px;
             border-radius: 10px;
-            transition: transform 0.3s ease-out;
+            transition: transform 0.3s ease;
         }
 
         .portfolio-image:hover {
             transform: scale(1.05);
+        }
+        .portfolio-image:active {
+            position: fixed;
+             top: 50%;
+             left: 50%;
+            transform: translate(-55%, -50%) scale(500%);
+            z-index: 2;
         }
 
         .downloads {
@@ -195,17 +274,20 @@
             margin: 5px;
         }
         .hero-download-button {
-            background-color: #009688; /* Button color */
+            background-color: #00968844; /* Button color */
             color: #fff;
             padding: 5px 15px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s ease-out;
+            transition: all 0.3s ease-out;
             margin: 5px;
         }
-
+        .hero-download-button:hover {
+            background-color: #00796b; /* Button hover color */
+            transform: translateY(-5px);
+        }
         .download-button:hover {
             background-color: #00796b; /* Button hover color */
         }
@@ -276,7 +358,7 @@
     </section>
     <header>
         <img src="Delightful_title.png" alt="Title Image" class="center">
-        <p>Make Minecraft <ins>Delightful!</ins></p>
+        <p class="titledesc">Make Minecraft <ins>Delightful!</ins></p>
         <a href="Delightful 1.2 FABRIC 1.2.1.mrpack"><button class="hero-download-button">Download</button></a>
     </header>
   
@@ -286,24 +368,24 @@
         <a href="#features">Features</a>
         <a href="#downloads">Downloads</a>
     </nav>
-    <section id="about">
+    <section id="about" class="section">
         <h2>About</h2>
         <p>Delightful is a very large collections of visual tweaks, terrain and structure overhauls, rebalances, vanilla+ game mechanics, and side-quest esque additions to make Minecraft Delightful!</p>
     </section>
-    <section id="gallery">
+    <section id="gallery" class="section">
         <h2>Gallery</h2>
         <div class="portfolio">
-            <a href="image1.html"><img src="2024-05-04_16.31.54.png" alt="Image 1" class="portfolio-image"></a>
-            <a href="image2.html"><img src="2024-05-11_22.08.59.png" alt="Image 2" class="portfolio-image"></a>
-            <a href="image3.html"><img src="huge_2024-05-16_14.42.39.png" alt="Image 3" class="portfolio-image"></a>
-            <a href="image4.html"><img src="2024-05-16_14.49.12.png" alt="Image 4" class="portfolio-image"></a>
-            <a href="image5.html"><img src="2024-05-16_14.45.48.png" alt="Image 5" class="portfolio-image"></a>
-            <a href="image6.html"><img src="huge_2024-05-16_15.03.37.png" alt="Image 6" class="portfolio-image"></a>
-            <a href="image7.html"><img src="2024-05-16_15.04.48.png" alt="Image 7" class="portfolio-image"></a>
+            <img src="2024-05-04_16.31.54.png" alt="Image 1" class="portfolio-image">
+            <img src="2024-05-11_22.08.59.png" alt="Image 2" class="portfolio-image">
+            <img src="huge_2024-05-16_14.42.39.png" alt="Image 3" class="portfolio-image">
+            <img src="2024-05-16_14.49.12.png" alt="Image 4" class="portfolio-image">
+            <img src="2024-05-16_14.45.48.png" alt="Image 5" class="portfolio-image">
+            <img src="huge_2024-05-16_15.03.37.png" alt="Image 6" class="portfolio-image">
+            <img src="2024-05-16_15.04.48.png" alt="Image 7" class="portfolio-image">
             <!-- Add more images as needed -->
         </div>
     </section>
-    <section id="features">
+    <section id="features" class="section">
         <h2>Features</h2>
         <div class="feature-guide">
             <h3>Feature 1</h3>
@@ -315,7 +397,7 @@
             <!-- Add more features -->
         </div>
     </section>
-    <section id="downloads">
+    <section id="downloads" class="section">
         <h2>Downloads</h2>
         <div class="downloads">
             <div class="download-column">
@@ -372,12 +454,12 @@
             </div>
         </div>
     </section>
-    <section id="links">
+    <section id="links" class="section">
         <h2>Links</h2>
         <p>Visit our Modrinth page:</p>
         <a href="https://modrinth.com/modpack/delightful-modpack" target="_blank">Delightful Modpack on Modrinth</a>
     </section>
-    <section id="contact">
+    <section id="contact" class="section">
         <h2>Contact Information</h2>
         <div class="contact-section">
             <h3>Email</h3>
@@ -388,14 +470,14 @@
             <p>+1 (123) 456-7890(temp)</p>
         </div>
     </section>
-    <section id="license">
+    <section id="license" class="section">
         <h2>License</h2>
         <div class="license-section">
             <p>This project is licensed under the Apache License 2.0 - see the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">LICENSE</a> file for details.</p>
         </div>
     </section>
     <footer>
-        <p>© 2024 Delightful Modpack<br><a href="#top"><p>Back to the top</p></a></p>
+        <p>© 2024 Delightful Modpack<br><a href="#top"></a></p><p><a href="#top">Back to the top</a></p><p></p>
     </footer>
     <script>
         // Smooth scrolling for navigation links
@@ -409,7 +491,8 @@
             });
         });
     </script>
-&lt;--!HI FROM BRAVER--&gt;
+<--!HI FROM BRAVER-->
+
 
 
 
