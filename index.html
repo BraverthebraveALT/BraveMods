@@ -64,8 +64,14 @@
   width: 50%;
   z-index: 0;
   animation: titlebounce1 0.8s ease-in 0s, titlebounce2 0.4s ease-out 0.8s, titlebounce3 0.3s ease-in 1.2s, titlebounce4 0.2s ease-out 1.5s, titlebounce5 0.15s ease-in 1.7s;
-  position: sticky;
+  transition: all 0.3s ease;
 } 
+.center:hover {
+    transform: scale(120%);
+}
+.center:active {
+    transform: scale(100%);
+}
 @keyframes titlebounce1 {
     from {
         transform: translateY(-200px);
@@ -162,7 +168,8 @@
 
         header {
             background-image: url("2024-05-04_16.31.54.png"); /* Header color */
-            padding: 150px;
+
+            padding: 260px 1vw 260px 1vw;
             text-align: center;
             background-attachment: fixed;
               background-position: center;
@@ -347,19 +354,24 @@
             transform: translateY(0);
         }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <style id="__web-inspector-hide-shortcut-style__">
 .__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
 {
     visibility: hidden !important;
 }
-</style></head>
+</style><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
 <body>
   <section id="top">
     </section>
     <header>
-        <img src="Delightful_title.png" alt="Title Image" class="center">
+        <a href="#downloads"><img src="Delightful_title.png" alt="Title Image" class="center"></a>
         <p class="titledesc">Make Minecraft <ins>Delightful!</ins></p>
-        <a href="Delightful 1.2 FABRIC 1.2.1.mrpack"><button class="hero-download-button">Download</button></a>
+        <a href="Delightful 1.2 FABRIC 1.2.2.mrpack"><button class="hero-download-button">Download</button></a>
     </header>
   
     <nav>
@@ -368,26 +380,26 @@
         <a href="#features">Features</a>
         <a href="#downloads">Downloads</a>
     </nav>
-    <section id="about" class="section">
+    <section id="about" class="section" data-aos="zoom-in">
         <h2>About</h2>
         <p>Delightful is a very large collections of visual tweaks, terrain and structure overhauls, rebalances, vanilla+ game mechanics, and side-quest esque additions to make Minecraft Delightful!</p>
     </section>
-    <section id="gallery" class="section">
+    <section id="gallery" class="section" data-aos="zoom-in">
         <h2>Gallery</h2>
         <div class="portfolio">
-            <img src="2024-05-04_16.31.54.png" alt="Image 1" class="portfolio-image">
-            <img src="2024-05-11_22.08.59.png" alt="Image 2" class="portfolio-image">
-            <img src="huge_2024-05-16_14.42.39.png" alt="Image 3" class="portfolio-image">
-            <img src="2024-05-16_14.49.12.png" alt="Image 4" class="portfolio-image">
-            <img src="2024-05-16_14.45.48.png" alt="Image 5" class="portfolio-image">
-            <img src="huge_2024-05-16_15.03.37.png" alt="Image 6" class="portfolio-image">
-            <img src="2024-05-16_15.04.48.png" alt="Image 7" class="portfolio-image">
+            <img src="2024-05-04_16.31.54.png" alt="Image 1" class="portfolio-image" data-aos="fade-right">
+            <img src="2024-05-11_22.08.59.png" alt="Image 2" class="portfolio-image" data-aos="fade-right">
+            <img src="huge_2024-05-16_14.42.39.png" alt="Image 3" class="portfolio-image" data-aos="fade-right">
+            <img src="2024-05-16_14.49.12.png" alt="Image 4" class="portfolio-image" data-aos="fade-right">
+            <img src="2024-05-16_14.45.48.png" alt="Image 5" class="portfolio-image" data-aos="fade-right">
+            <img src="huge_2024-05-16_15.03.37.png" alt="Image 6" class="portfolio-image" data-aos="fade-right">
+            <img src="2024-05-16_15.04.48.png" alt="Image 7" class="portfolio-image" data-aos="fade-right">
             <!-- Add more images as needed -->
         </div>
     </section>
-    <section id="features" class="section">
+    <section id="features" class="section" data-aos="zoom-in">
         <h2>Features</h2>
-        <div class="feature-guide">
+        <div class="feature-guide" data-aos="zoom-in">
             <h3>Feature 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum eros ac lectus commodo, vel suscipit urna fermentum.</p>
             <h3>Feature 2</h3>
@@ -397,9 +409,9 @@
             <!-- Add more features -->
         </div>
     </section>
-    <section id="downloads" class="section">
+    <section id="downloads" class="section" data-aos="zoom-in">
         <h2>Downloads</h2>
-        <div class="downloads">
+        <div class="downloads" data-aos="zoom-in">
             <div class="download-column">
                 <h3>Delightful Downloads</h3>
               <div class="version-column">
@@ -409,7 +421,7 @@
                         <p>Sleeping bug has been fixed. looking into bobby mod for render distance</p>
                     </div>
                     <a href="Delightful 1.2 FABRIC 1.2.2.mrpack"><button class="download-button">Modrinth Download</button></a>
-                    <button class="download-button">Curseforge</button>
+                    <button class="download-button">Curseforge Download</button>
                 </div>
                 <div class="version-column">
                     <div class="version">Version 1.2.1</div>
@@ -417,8 +429,8 @@
                         <h3>Changelog:</h3>
                         <p>After much stress trying to forceabily change the SemVer of Iris, Physics mod is now working providing non gameplay disruptive enhancements, removed some non-working mods and added a few performance ones related to chunk loading.</p>
                     </div>
-                    <a href="Delightful 1.2 FABRIC 1.2.1.mrpack"><button class="download-button">Download Modpack</button></a>
-                    <button class="download-button">Download Resource Pack</button>
+                    <a href="Delightful 1.2 FABRIC 1.2.1.mrpack"><button class="download-button">Modrinth Download</button></a>
+                    <button class="download-button">Curseforge Download</button>
                 </div>
                 <div class="version-column">
                     <div class="version-main">Version 1.1</div>
@@ -426,17 +438,17 @@
                         <h3>Changelog:</h3>
                         <p><b>The most stable version of Delightful</b><br><br>Out Now on Modrinth!<br>removed some mod relating to banners as they were incompatibleupdated to latest verion of fabricremoved bugged puzzles lib button in options menureleased on modrinthstopped all(I think, maybe, Idk) the wierd crashes</p>
                     </div>
-                    <button class="download-button">Download Modpack</button>
-                    <button class="download-button">Download Resource Pack</button>
+                    <button class="download-button">Modrinth Download</button>
+                    <button class="download-button">Curseforge Download</button>
                 </div>
                 <div class="version-column">
                     <div class="version">Version 1.0</div>
                     <div class="changelog">
                         <h3>Changelog:</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum eros ac lectus commodo, vel suscipit urna fermentum.</p>
+                        <p><em>there where many interations after this and before 1.1, but I finished this version a while ago and thourght I'd never add anything else</em><br>This version is old, does not include many of the mods that are in the newer version and was made way before 1.1<br> got rid of non-working mods</p>
                     </div>
-                    <button class="download-button">Download Modpack</button>
-                    <button class="download-button">Download Resource Pack</button>
+                    <button class="download-button">Modrinth Download</button>
+                    <button class="download-button">Curseforge Download</button>
                 </div>
             </div>
             <div class="divider"></div>
@@ -446,33 +458,33 @@
                     <div class="version">Version 1.0</div>
                     <div class="changelog">
                         <h3>Changelog:</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum eros ac lectus commodo, vel suscipit urna fermentum.</p>
+                        <p>Adds most content that Delightful does, with less new blocks and items as well as more vanilla style mod replacements, tries to make it vanilla to the extent that a normal speedrun wouldn't be very different</p>
                     </div>
-                    <button class="download-button">Download Modpack</button>
-                    <button class="download-button">Download Resource Pack</button>
+                    <button class="download-button">Modrinth Download</button>
+                    <button class="download-button">Curseforge Download</button>
                 </div>
             </div>
         </div>
     </section>
-    <section id="links" class="section">
+    <section id="links" class="section" data-aos="zoom-in">
         <h2>Links</h2>
         <p>Visit our Modrinth page:</p>
         <a href="https://modrinth.com/modpack/delightful-modpack" target="_blank">Delightful Modpack on Modrinth</a>
     </section>
-    <section id="contact" class="section">
+    <section id="contact" class="section" data-aos="zoom-in">
         <h2>Contact Information</h2>
-        <div class="contact-section">
+        <div class="contact-section" data-aos="zoom-in">
             <h3>Email</h3>
             <p>themcbraverthebrave@gmail.com</p>
         </div>
-        <div class="contact-section">
-            <h3>Phone</h3>
-            <p>+1 (123) 456-7890(temp)</p>
+        <div class="contact-section" data-aos="zoom-in">
+            <h3>Discord</h3>
+            <p>Comming soon</p>
         </div>
     </section>
-    <section id="license" class="section">
+    <section id="license" class="section" data-aos="zoom-in">
         <h2>License</h2>
-        <div class="license-section">
+        <div class="license-section"  data-aos="zoom-in">
             <p>This project is licensed under the Apache License 2.0 - see the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">LICENSE</a> file for details.</p>
         </div>
     </section>
@@ -491,7 +503,10 @@
             });
         });
     </script>
-<--!HI FROM BRAVER-->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
 
 
 
