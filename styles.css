@@ -1,0 +1,304 @@
+<style>
+     /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #555; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00cc66; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #006633; 
+}
+
+:root {
+    --displaycenter: 1vw;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  z-index: 0;
+  animation: titlebounce1 0.8s ease-in 0s, titlebounce2 0.4s ease-out 0.8s, titlebounce3 0.3s ease-in 1.2s, titlebounce4 0.2s ease-out 1.5s, titlebounce5 0.15s ease-in 1.7s;
+  transition: all 0.3s ease;
+} 
+.center:hover {
+    transform: scale(120%);
+}
+.center:active {
+    transform: scale(100%);
+}
+@keyframes titlebounce1 {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+@keyframes titlebounce2 {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50px)
+    }
+}
+@keyframes titlebounce3 {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0px)
+    }
+}
+@keyframes titlebounce4 {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-25px)
+    }
+}
+@keyframes titlebounce5 {
+    from {
+        transform: translateY(-25px);
+    }
+    to {
+        transform: translateY(0px)
+    }
+}
+.hero-download-button {
+    animation: titledescwait 2.2s ease-out 0s, titledescfadein 0.6s ease-out 2.2s
+}
+.titledesc {
+    animation: titledescwait 1.7s ease-out 0s, titledescfadein 0.6s ease-out 1.7s
+}
+@keyframes titledescwait {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+@keyframes titledescfadein {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+/* Reset */
+.parallax {
+  /* The image used */
+  background-image: url("2024-05-04_16.31.54.png");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #292929; /* Dark background color */
+            color: #fff; /* Text color */
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-image: url("2024-05-04_16.31.54.png"); /* Header color */
+
+            padding: 260px 1vw 260px 1vw;
+            text-align: center;
+            background-attachment: fixed;
+              background-position: center;
+            background-repeat: no-repeat;
+  background-size: cover;
+        }
+
+        nav {
+            background-color: #333333; /* Navigation color */
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            animation: fadeIn;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff; /* White text color */
+            text-decoration: none; /* Remove underline */
+            margin: 0 10px; /* Margin for spacing */
+            transition: all 1s ease; /* Smooth transition on hover */
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Add underline on hover */
+            transform: scale(10);
+            }
+
+        .section {
+            padding: 20px;
+            background-color: #4a4a4a; /* Section background color */
+            border-radius: 10px;
+            margin: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .portfolio-image {
+            width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-image:hover {
+            transform: scale(1.05);
+        }
+        .portfolio-image:active {
+            position: fixed;
+             top: 50%;
+             left: 50%;
+            transform: translate(-55%, -50%) scale(500%);
+            z-index: 2;
+            transform: scale(500%);
+        }
+
+        .downloads {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .download-column {
+            flex: 1;
+            margin: 10px;
+            background-color: #4a4a4a; /* Downloads section background color */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .version-column {
+            margin-bottom: 20px;
+        }
+
+        .version-main {
+            background-color: #00cc66; /* Version background color */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .version {
+            background-color: #666666; /* Version background color */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .changelog {
+            background-color: #555555; /* Changelog background color */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .download-button {
+            background-color: #009688; /* Button color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-out;
+            margin: 5px;
+        }
+        .hero-download-button {
+            background-color: #00968844; /* Button color */
+            color: #fff;
+            padding: 5px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+            margin: 5px;
+        }
+        .hero-download-button:hover {
+            background-color: #00796b; /* Button hover color */
+            transform: translateY(-5px);
+        }
+        .download-button:hover {
+            background-color: #00796b; /* Button hover color */
+        }
+
+        footer {
+            background-color: #333333; /* Footer color */
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
